@@ -1,8 +1,9 @@
-import React, {useState, Fragment} from 'react'
+import React, {useState} from 'react'
 import './App.css';
 
 function App() {
   const [counter, setCounter] = useState(0);
+  
   function increment() {
     setCounter(prev => prev + 1)
   }
