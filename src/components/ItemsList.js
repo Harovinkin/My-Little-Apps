@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 
 function ItemsList({getItems}) {
   const [items, setItems] = useState([]);
@@ -6,7 +6,6 @@ function ItemsList({getItems}) {
   useEffect(() => {
     const newItems = getItems();
     setItems(newItems)
-    console.log('Render')
   }, [getItems])
 
   return (
