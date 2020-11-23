@@ -1,13 +1,13 @@
 import React from 'react';
 import { useAlert } from './alert/AlertContext';
 
-function Main(props) {
+function Main() {
 
-  const {toggle} = useAlert()
+  const {show} = useAlert()
   return (
     <div>
       <h1>Using of Context</h1>
-      <button onClick={toggle}>Alert Toggle</button>
+      <button onClick={() => show('This is text from Main')}>Alert Toggle</button>
     </div>
   );
 }

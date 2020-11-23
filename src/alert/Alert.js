@@ -1,14 +1,14 @@
 import React from 'react';
 import {useAlert} from './AlertContext';
 
-function Alert(props) {
-  const {visible, toggle} = useAlert()
+function Alert() {
+  const {visible, hide, text} = useAlert()
 
   if (!visible) return null
 
   return ( 
-    <div onClick={toggle}>
-      <b>WARNING!!!</b>
+    <div onClick={hide}>
+      <b>WARNING!!! {text}</b>
     </div>
   );
 }
